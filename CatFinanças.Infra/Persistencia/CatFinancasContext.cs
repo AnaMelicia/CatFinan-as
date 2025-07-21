@@ -8,7 +8,7 @@ namespace CatFinanças.Infra.Persistencia
     {
         public CatFinancasContext(DbContextOptions<CatFinancasContext> options) : base(options) { }
 
-        public DbSet<Gasto> Gastos { get; set; }
+        public DbSet<Gasto> Gasto { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

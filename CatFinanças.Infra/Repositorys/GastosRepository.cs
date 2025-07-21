@@ -1,5 +1,7 @@
 ﻿using CatFinanças.Domain.Entidades;
 using CatFinanças.Infra.Interfaces;
+using CatFinanças.Infra.Persistencia;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +12,18 @@ namespace CatFinanças.Infra.Repositorys
 {
     public class GastosRepository : IGastosRepository
     {
-        public GastosRepository() { }
-
-        public Task<List<Gasto>> BuscarGastosAsync()
+        public GastosRepository(CatFinancasContext context)
         {
-            var gastos = new List<Gasto>();
+            _context = context;
+        }
 
-            var gasto = new Gasto();
-            gasto.Id = 1;
-            gasto.Name = "Netflix";
-            gasto.Valor = 19.99;
+        private readonly CatFinancasContext _context;
 
-            gastos.Add(gasto);
+        public async Task<List<Gasto>> BuscarGastosAsync()
+        {
+            var gastos = await _context.Gasto.ToListAsync();
 
-            return Task.FromResult(gastos);
+            return gastos;
         }
     }
 }
