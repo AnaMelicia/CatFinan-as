@@ -15,7 +15,7 @@ namespace CatFinanças.Application.Gastos
             _gastosRepository = gastosRepository;
         }
 
-        public async Task<List<Domain.Entidades.Gastos>> Handle()
+        public async Task<List<Domain.Entidades.Gasto>> Handle()
         {
             var gastos = await _gastosRepository.BuscarGastosAsync();
             return gastos;

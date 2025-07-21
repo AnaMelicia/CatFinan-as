@@ -12,11 +12,11 @@ namespace CatFinanças.Infra.Repositorys
     {
         public GastosRepository() { }
 
-        public Task<List<Gastos>> BuscarGastosAsync()
+        public Task<List<Gasto>> BuscarGastosAsync()
         {
-            var gastos = new List<Gastos>();
+            var gastos = new List<Gasto>();
 
-            var gasto = new Gastos();
+            var gasto = new Gasto();
             gasto.Id = 1;
             gasto.Name = "Netflix";
             gasto.Valor = 19.99;

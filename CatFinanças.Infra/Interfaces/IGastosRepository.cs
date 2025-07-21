@@ -8,6 +8,6 @@ namespace CatFinanças.Infra.Interfaces
 {
     public interface IGastosRepository
     {
-        Task<List<Domain.Entidades.Gastos>> BuscarGastosAsync();
+        Task<List<Domain.Entidades.Gasto>> BuscarGastosAsync();
     }
 }

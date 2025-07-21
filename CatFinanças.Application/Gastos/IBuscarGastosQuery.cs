@@ -8,6 +8,6 @@ namespace CatFinanças.Application.Gastos
 {
     public interface IBuscarGastosQuery
     {
-        Task<List<Domain.Entidades.Gastos>> Handle();
+        Task<List<Domain.Entidades.Gasto>> Handle();
     }
 }

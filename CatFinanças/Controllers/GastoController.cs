@@ -18,7 +18,7 @@ namespace CatFinanças.Controllers
         }
 
         [HttpGet(Name = "GetGastos")]
-        public async Task<List<Gastos>> Get([FromServices] IBuscarGastosQuery handler)
+        public async Task<List<Gasto>> Get([FromServices] IBuscarGastosQuery handler)
         {
             return await handler.Handle();
 

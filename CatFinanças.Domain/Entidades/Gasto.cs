@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace CatFinanças.Domain.Entidades
 {
-    public class Gastos
+    public class Gasto
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public double Valor { get; set; }
+        public bool Fixo { get; set; }
 
     }
 }
